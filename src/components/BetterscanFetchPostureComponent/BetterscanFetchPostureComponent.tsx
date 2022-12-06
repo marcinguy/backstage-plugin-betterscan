@@ -44,7 +44,7 @@ export const DenseTable = ({ projects }: DenseTableProps) => {
 
   const data = projects.map(project => {
     return {
-      description: project.description,
+      description: project.name,
       badge: (<img src={"http://localhost:7007/api/proxy/betterscan/api/v1/project/"+project.permalink+"/badge.svg"} className={classes.badge} />)
     };
   });
