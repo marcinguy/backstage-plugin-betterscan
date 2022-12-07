@@ -30,6 +30,22 @@ app-config.yaml
 ```
 Bearer should be otput from curl
 
+You can use env var also:
+
+app-config.yaml
+```
+ '/betterscan':
+    target: http://localhost:5000
+    headers:
+      Authorization: Bearer ${BETTERSCAN_TOKEN}
+```
+
+And in shell:
+
+```
+export BETTERSCAN_TOKEN="bbf8e8794af64a51b304caf836c542c0"
+```
+
 
 Install plugin
 
