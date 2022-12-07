@@ -33,5 +33,6 @@ Bearer should be otput from curl
 
 Install plugin
 
-![image](https://user-images.githubusercontent.com/20355405/206018181-1bcd2ec7-82ce-4d58-b446-d2a7739b907d.png)
+![image](https://user-images.githubusercontent.com/20355405/206125709-97f749ef-7a90-4484-b540-c5e04a96360c.png)
+
 
