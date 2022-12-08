@@ -32,3 +32,13 @@ export const BetterscanPage = betterscanPlugin.provide(
     mountPoint: rootRouteRef,
   }),
 );
+
+export const BetterscanFetchPostureComponent = betterscanPlugin.provide(
+  createRoutableExtension({
+    name: 'BetterscanFetchPostureComponent',
+    component: () =>
+      import('./components/BetterscanFetchPostureComponent').then(m => m.BetterscanFetchPostureComponent),
+    mountPoint: rootRouteRef,
+  }),
+);
+
