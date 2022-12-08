@@ -60,13 +60,13 @@ http://localhost:3000/catalog/default/component/documented-component
 
 Install the plugin into Backstage.
 
-yarn add @marcinguy/plugin-betterscan
+`yarn add @marcinguy/plugin-betterscan`
 
 Import it into your Backstage application.
 
 ```
 // packages/app/src/components/catalog/EntityPage.tsx
-import { BetterscanFetchPostureComponent } from '@backstage/plugin-betterscan';
+import { BetterscanFetchPostureComponent } from '@marcinguy/plugin-betterscan';
 ```
 
 
