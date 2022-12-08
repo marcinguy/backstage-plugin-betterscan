@@ -60,13 +60,13 @@ http://localhost:3000/catalog/default/component/documented-component
 
 Install the plugin into Backstage.
 
-`yarn add @marcinguy/plugin-betterscan`
+`yarn add @marcinguy/backstage-plugin-betterscan`
 
 Import it into your Backstage application.
 
 ```
 // packages/app/src/components/catalog/EntityPage.tsx
-import { BetterscanFetchPostureComponent } from '@marcinguy/plugin-betterscan';
+import { BetterscanFetchPostureComponent } from '@marcinguy/backstage-plugin-betterscan';
 ```
 
 
@@ -77,7 +77,7 @@ Add Widget API to your Backstage instance.
 
 ```
 // packages/app/src/components/catalog/EntityPage.tsx
-import { BetterscanFetchPostureComponent } from '@backstage/plugin-betterscan';
+import { BetterscanFetchPostureComponent } from '@marcinguy/backstage-plugin-betterscan';
 
 const OverviewContent = ({ entity }: { entity: Entity }) => (
   <Grid container spacing={3} alignItems="stretch">
