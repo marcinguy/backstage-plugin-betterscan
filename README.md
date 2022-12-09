@@ -13,10 +13,24 @@ cd betterscan-ce/dockerhub
 ./start.sh
 ```
 
-Get Bearer token with:
+Get Bearer token with curl or `bearer.sh` helper script
 
 ```
 curl -s 'http://localhost:5000/api/v1/login' --data-raw 'email=test@ok.com&password=testtest' | jq .access_token
+```
+
+Sample `bearer.sh` helper script invocation:
+
+```
+./bearer.sh
+This will get your Bearer token from Betterscan Instance
+What is the address of your instance? (i.e http://localhost:5000)
+https://app.betterscan.io
+What is the username?
+marcinguy@gmail.com
+What is the password?
+password
+Token: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 Update:
@@ -28,7 +42,7 @@ app-config.yaml
     headers:
       Authorization: Bearer bbf8e8794af64a51b304caf836c542c0
 ```
-Bearer should be otput from curl
+Bearer should be output from curl or script.
 
 You can use env var also:
 
