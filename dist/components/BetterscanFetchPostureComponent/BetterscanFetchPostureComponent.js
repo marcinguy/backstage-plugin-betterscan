@@ -28,20 +28,22 @@ export const DenseTable = ({ projects }) => {
         { title: 'Project', field: 'description' },
         { title: 'Badge', field: 'badge' },
     ];
+    const config = useApi(configApiRef);
+    const backendUrl = config.getString('backend.baseUrl');
     const data = projects.map(project => {
         return {
             description: project.name,
-            badge: (React.createElement("img", { src: "http://localhost:7007/api/proxy/betterscan/api/v1/project/" + project.permalink + "/badge.svg", className: classes.badge }))
+            badge: (React.createElement("img", { src: backendUrl + "/api/proxy/betterscan/api/v1/project/" + project.permalink + "/badge.svg", className: classes.badge }))
         };
     });
-    return (React.createElement(Table, { title: "Your Projects", options: { search: false, paging: false }, columns: columns, data: data }));
+    return (React.createElement(Table, { title: "Your Projects", options: { search: true, paging: true }, columns: columns, data: data }));
 };
 export const BetterscanFetchPostureComponent = () => {
     const config = useApi(configApiRef);
     const backendUrl = config.getString('backend.baseUrl');
-    console.log(backendUrl);
+    const url = backendUrl + "/api/proxy/betterscan/api/v1/projects";
     const { value, loading, error } = useAsync(async () => {
-        const response = await fetch(`http://localhost:7007/api/proxy/betterscan/api/v1/projects`);
+        const response = await fetch(url);
         const data = await response.json();
         return data.projects;
     }, []);
