@@ -1,1 +1,0 @@
-export { BetterscanFetchPostureComponent } from './BetterscanFetchPostureComponent';

@@ -1,1 +1,0 @@
-export { BetterscanComponent } from './BetterscanComponent';
